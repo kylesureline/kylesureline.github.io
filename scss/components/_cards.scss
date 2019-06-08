@@ -1,0 +1,86 @@
+// ======================================
+//  Cards
+// ======================================
+
+.card {
+  cursor: pointer;
+  width: 300px;
+  height: 100%;
+  @include roundy($radius: 12px);
+  background-color: map-get($theme, 4);
+  color: map-get($theme, 1);
+  margin: 0 auto auto auto;
+  display: inline-block;
+  overflow-y: hidden;
+  opacity: 1;
+  filter: blur(0px);
+  box-shadow: 4px 4px 32px 0 $black,
+              0 0 0 1px rgba($black, .2);
+  transition: .4s transform, .4s box-shadow;
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 12px 12px 64px -8px $black,
+                0 0 0 1px rgba($black, .2);
+  }
+  @media (max-width: 320px) {
+    width: 100%;
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+.card h3 {
+  margin: 0;
+}
+
+.card p {
+  margin: auto 0;
+  @media (max-width: 320px) {
+    margin: .5em 0;
+  }
+}
+
+.slider img {
+  transition: 12s linear;
+}
+
+.fader img {
+  transition: 1s;
+}
+
+.slider:hover img {
+  transform: translateY(calc(-100% + 188px));
+}
+
+.screenshot {
+  height: 188px;
+  overflow-y: hidden;
+  & img {
+    width: 100%;
+  }
+}
+
+.card.fader .screenshot {
+  position: relative;
+}
+
+.card.fader .screenshot img {
+  position: absolute;
+  left: 0;
+}
+
+.card.fader:hover .top {
+  opacity: 0;
+}
+
+.card .info {
+  height: calc(100% - 188px);
+  @include flexy($disp: flex, $just: flex-start, $dir: column);
+  padding: 1em;
+}
+
+.faded {
+  opacity: .7;
+  filter: blur(2px);
+}

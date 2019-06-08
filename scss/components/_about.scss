@@ -1,0 +1,37 @@
+// ======================================
+//  About
+// ======================================
+
+#about {
+  background-color: map-get($theme, 4);
+  color: map-get($theme, 1);
+}
+
+#about .container {
+  max-width: 1024px;
+}
+
+#about .row {
+  @include flexy($disp: flex, $wrap: wrap, $just: center, $align-items: center);
+  & .bio {
+    -webkit-flex: 1 0 65%;       /* Safari 6.1+. iOS 7.1+, BB10 */
+    -ms-flex: 1 0 65%;
+    flex: 1 0 65%;
+    @media (min-width: 768px) {
+      text-align: left;
+    }
+  }
+  & .profile {
+    -webkit-flex: 1 0 30%;       /* Safari 6.1+. iOS 7.1+, BB10 */
+    -ms-flex: 1 0 30%;
+    flex: 1 0 30%;
+    text-align: center;
+    & img {
+      @include roundy;
+    }
+  }
+}
+
+#about h2 {
+  margin: 0;
+}

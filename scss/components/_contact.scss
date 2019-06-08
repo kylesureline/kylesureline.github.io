@@ -1,0 +1,41 @@
+// ======================================
+//  Contact
+// ======================================
+
+#contact {
+  background-color: map-get($theme, 5);
+  color: $white;
+}
+
+#contact h2 {
+  color: $white;
+}
+
+#contact .links ul {
+  width: 70%;
+  min-width: 280px;
+  margin: 0 auto;
+  @include flexy($disp: flex, $just: space-evenly);
+}
+
+#contact .links li {
+  transition: .4s transform;
+  & a {
+    display: inline-block;
+    height: 57px;
+    width: 57px;
+    background-color: $white;
+    @include roundy;
+    @include flexy($disp: flex, $just: center, $align-items: center);
+  }
+}
+
+#contact p {
+  & a {
+    color: map-get($theme, 4);
+  }
+}
+
+#contact .container {
+  max-width: 600px;
+}

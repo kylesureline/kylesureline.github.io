@@ -1,0 +1,154 @@
+// ======================================
+//  Modal
+// ======================================
+
+.modal {
+  z-index: 2000;
+  background-color: rgba(0, 0, 0, .65);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include flexy($disp: flex, $dir: column, $just: center, $align-items: center);
+}
+
+.modal-content {
+  & h2 {
+    margin: 0 auto;
+    font-size: 1.75em;
+  }
+  & p {
+    margin: .5em auto;
+    font-size: 1.1em;
+    @media (max-width: 320px) {
+      font-size: 1em;
+    }
+    @media (min-width: 768px) {
+      font-size: 1.2em;
+    }
+    @media (min-width: 1024px) {
+      font-size: 1.3em;
+    }
+  }
+  height: 60%;
+  min-height: 540px;
+  max-height: 800px;
+  width: calc(100% - 1em);
+  max-width: 540px;
+  @media (min-width: 768px) {
+    height: 70%;
+  }
+  @include roundy($radius: 12px);
+  overflow: hidden;
+  @media (max-width: 320px) {
+    min-height: inherit;
+    height: 100%;
+    width: 100%;
+    @include roundy($radius: 0px);
+  }
+  background-color: $white;
+  color: map-get($theme, 1);
+  position: relative;
+  text-align: center;
+  & .close {
+    top: 1em;
+    right: 1em;
+    width: 32px;
+    height: 32px;
+    background-color: rgba(255, 255, 255, .6);
+    @include roundy;
+    cursor: pointer;
+    position: absolute;
+    @include flexy($disp: flex, $just: center, $align-items: center);
+  }
+}
+
+.modal-content .info {
+  position: relative;
+  padding: 1em;
+  @include flexy($disp: flex, $dir: column, $just: flex-start);
+  height: calc(100% - 200px);
+  @media (min-width: 768px) {
+    height: 60%;
+  }
+}
+
+.modal-content p {
+  margin: auto 0;
+}
+
+.modal-content .image.feature {
+  box-shadow: 0 0 64px -8px $black inset;
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  @media (min-width: 768px) {
+    height: 40%;
+  }
+  background-color: $black;
+}
+
+.modal-content .arrow {
+  @include flexy($disp: flex, $just: center, $align-items: center);
+  @include roundy;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  &.left {
+    left: .75em;
+  }
+  &.right {
+    right: .75em;
+  }
+  & img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.modal-content .links ul,
+.modal-content .tags ul {
+  @include flexy($disp: flex, $just: center);
+  margin: 0 auto;
+}
+
+.modal-content .tags ul {
+  flex-wrap: wrap;
+  @media (max-width: 320px) {
+    display: none;
+  }
+}
+
+.modal-content .links ul li {
+  padding: .5em;
+}
+
+.modal-content .links a {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  @include flexy($disp: flex, $just: center, $align-items: center);
+  background-color: map-get($theme, 1);
+  @include roundy($radius: 4px);
+  & svg path {
+    fill: $white;
+  }
+}
+
+.modal-content .tags li {
+  color: $white;
+  background-color: map-get($theme, 5);
+  @include roundy($radius: 4px);
+  padding: 6px;
+  margin: 4px;
+  font-size: 1em;
+}
+
+.modal-content p a {
+  color: map-get($theme, 5);
+  transition: .4s opacity;
+  &:hover {
+    opacity: .7;
+  }
+}

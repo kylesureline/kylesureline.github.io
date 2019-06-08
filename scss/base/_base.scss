@@ -1,0 +1,41 @@
+// ======================================
+//  Base
+// ======================================
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @include flexy($disp: flex, $dir: column, $just: flex-start);
+  margin-top: 40px;
+  @media (max-width: 320px) {
+    margin-top: 34px;
+  }
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a[href$="pdf"] {
+  color: map-get($theme, 5);
+}
+
+a.link:hover {
+  opacity: .7;
+}
+
+h2 {
+  margin-top: 0;
+}

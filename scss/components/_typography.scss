@@ -1,0 +1,47 @@
+// ======================================
+//  Typography
+// ======================================
+
+nav,
+#portfolio h3,
+h2 {
+  font-family: $font-heading;
+}
+
+#about,
+#portfolio,
+#contact {
+  text-align: center;
+}
+
+#about p,
+#portfolio p,
+#contact p,
+footer p,
+.modal-content p,
+.banner,
+.tags {
+  font-family: $font-body;
+}
+
+.card {
+  @include noHighlight;
+}
+
+h2 {
+  color: map-get($theme, 1);
+}
+
+#about p,
+#contact p,
+.card p {
+  font-size: 1.1em;
+  line-height: 1.25;
+  @media (min-width: 768px) {
+    font-size: 1.2em;
+  }
+}
+
+h3 {
+  font-size: 1.4em;
+}

@@ -1,0 +1,48 @@
+// ======================================
+//  Navigation
+// ======================================
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  background-color: map-get($theme, 1);
+  color: $white;
+  box-shadow: 0 0 24px -4px $black;
+  font-size: 1.2em;
+  @media (max-width: 320px) {
+    font-size: 1em;
+  }
+}
+
+.nav-header ul {
+  text-align: center;
+  margin: 0;
+  @include flexy($disp: flex, $just: space-between);
+}
+
+.nav-header ul li.link {
+  transition: .2s;
+  &:hover {
+    background-color: map-get($theme, 4);
+    color: map-get($theme, 1);
+  }
+}
+
+.nav-header li a {
+  display: inline-block;
+}
+
+.nav-header li a,
+.nav-header .name {
+  padding: .5em 1em;
+}
+
+.nav-header .name {
+  margin-right: auto;
+  display: none;
+  @media (min-width: 768px) {
+    display: list-item;
+  }
+}
