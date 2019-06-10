@@ -111,6 +111,23 @@ document.addEventListener('DOMContentLoaded', (e) => {
         slider: 'registration-form-full.jpg',
         modal: 'registration-form-modal.jpg'
       }
+    },
+    {
+      name: 'Movie List App',
+      descriptions: {
+        short: 'Fetch a list of movies that characters appear in.',
+        long: 'Built with React. Fetch a list of movies that characters appear in.'
+      },
+      tags: ['JavaScript', 'React', 'Fetch API'],
+      links: {
+        github: 'https://github.com/kylesureline/movie-list',
+        demo: '/movie-list/public/'
+      },
+      cardType: 'slider',
+      images: {
+        slider: 'movie-list-full.jpg',
+        modal: 'movie-list-modal.jpg'
+      }
     }
   ];
   const icons = {
