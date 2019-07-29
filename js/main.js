@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
       tags: ['JavaScript', 'React', 'Fetch API'],
       links: {
         github: 'https://github.com/kylesureline/movie-list',
-        demo: '/movie-list/public/'
+        demo: '/movie-list/'
       },
       cardType: 'slider',
       images: {
