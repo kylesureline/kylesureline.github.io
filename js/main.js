@@ -2,49 +2,15 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
   const projects = [
     {
-      name: 'Expensify',
+      name: 'Hangapp',
       descriptions: {
-        short: 'An expense tracking app built with React and Webpack',
-        long: 'Log in and start tracking expenses. It\'s time to get your expenses under control. Developed with tests using Jest.'
+        short: 'A full-featured Hangman game, built with React and Webpack',
+        long: 'This Hangman game is built using React and deployed to Heroku. It includes a comprehensive testing suite using Jest.'
       },
-      tags: ['React', 'Redux', 'Webpack', 'Firebase'],
-      links: {
-        github: 'https://github.com/kylesureline/react-course-2-expensify-app',
-        demo: 'https://expense-tab.herokuapp.com/'
-      },
-      cardType: 'slider',
-      images: {
-        slider: 'expensify-full.jpg',
-        modal: 'expensify-modal.jpg'
-      }
-    },
-    {
-      name: 'Movie List App',
-      descriptions: {
-        short: 'Fetch a list of movies that characters appear in.',
-        long: 'Built with React. Fetch a list of movies that characters appear in.'
-      },
-      tags: ['JavaScript', 'React', 'Fetch API'],
-      links: {
-        github: 'https://github.com/kylesureline/movie-list',
-        demo: '/movie-list/'
-      },
-      cardType: 'slider',
-      images: {
-        slider: 'movie-list-full.jpg',
-        modal: 'movie-list-modal.jpg'
-      }
-    },
-    {
-      name: 'Hangapp PWA',
-      descriptions: {
-        short: 'A full-featured Hangman game, built as a Progressive Web App.',
-        long: 'This Hangman game includes 3 difficulty modes, 2 color themes. The app fetches definitions from m-w.com and caches them using localStorage in the background.'
-      },
-      tags: ['JavaScript', 'PWA', 'Fetch API', 'SVG Animation'],
+      tags: ['React', 'Redux', 'Webpack', 'Firebase', 'Jest', 'Heroku'],
       links: {
         github: 'https://github.com/kylesureline/hangapp',
-        demo: '/hangapp/'
+        demo: 'https://react-hangapp.herokuapp.com'
       },
       cardType: 'fader',
       images: {
@@ -53,6 +19,23 @@ document.addEventListener('DOMContentLoaded', (e) => {
           top: 'hangapp.jpg'
         },
         modal: 'hangapp-modal.jpg'
+      }
+    },
+    {
+      name: 'Expensify',
+      descriptions: {
+        short: 'An expense tracking app built with React and Webpack',
+        long: 'Log in and start tracking expenses. It\'s time to get your expenses under control. Developed with tests using Jest.'
+      },
+      tags: ['React', 'Redux', 'Webpack', 'Firebase', 'Jest', 'Heroku'],
+      links: {
+        github: 'https://github.com/kylesureline/react-course-2-expensify-app',
+        demo: 'https://expense-tab.herokuapp.com/'
+      },
+      cardType: 'slider',
+      images: {
+        slider: 'expensify-full.jpg',
+        modal: 'expensify-modal.jpg'
       }
     },
     {
