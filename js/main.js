@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
       document.getElementById("preload-04").style.background = "url(images/photo-gallery-modal.jpg) no-repeat -9999px -9999px";
       document.getElementById("preload-05").style.background = "url(images/web-style-guide-modal.jpg) no-repeat -9999px -9999px";
       document.getElementById("preload-06").style.background = "url(images/registration-form-modal.jpg) no-repeat -9999px -9999px";
-      document.getElementById("preload-07").style.background = "url(images/movie-list-modal.jpg) no-repeat -9999px -9999px";
+      document.getElementById("preload-07").style.background = "url(images/expensify-modal.jpg) no-repeat -9999px -9999px";
   	}
   }
 
