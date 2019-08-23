@@ -15,18 +15,16 @@
 }
 
 #skills .icon {
-  width: 38px;
-  height: 38px;
-  @media (max-width: 320px) {
-    width: 32px;
-    height: 32px;
-  }
-  @media (min-width: 768px) {
-    width: 56px;
-    height: 56px;
-  }
+  width: 100%;
+  padding: 15px;
+  border: 2px solid map-get($theme, 2);
+  border-radius: 12px;
+  transition: border .2s;
   & path {
     fill: map-get($theme, 4);
+  }
+  &:hover {
+    border: 2px solid rgba(map-get($theme, 4), .5);
   }
 }
 

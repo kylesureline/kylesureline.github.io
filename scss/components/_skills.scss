@@ -13,5 +13,23 @@
 }
 
 #skills .tech-icons {
-  @include flexy($disp: flex, $just: space-evenly);
+  margin: 0 auto;
+  max-width: 1200px;
+  figure {
+    margin: 0;
+    flex: 0 1 30%;
+    max-width: 100px;
+    figcaption {
+      color: map-get($theme, 4);
+      font-family: $font-body;
+      opacity: 0;
+      transition: opacity .2s;
+    }
+    &:hover {
+      figcaption {
+        opacity: 1;
+      }
+    }
+  }
+  @include flexy($disp: flex, $just: space-evenly, $wrap: wrap);
 }
