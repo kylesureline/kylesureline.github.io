@@ -489,21 +489,11 @@ header {
 }
 .modal-content p {
   margin: 0.5em auto;
-  font-size: 1.1em;
-}
-@media (max-width: 320px) {
-  .modal-content p {
-    font-size: 1em;
-  }
+  font-size: 1.2em;
 }
 @media (min-width: 768px) {
   .modal-content p {
-    font-size: 1.2em;
-  }
-}
-@media (min-width: 1024px) {
-  .modal-content p {
-    font-size: 1.3em;
+    font-size: 1.4em;
   }
 }
 @media (min-width: 768px) {
