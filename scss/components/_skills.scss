@@ -25,10 +25,11 @@
       opacity: 0;
       transition: opacity .2s;
     }
-    &:hover {
-      figcaption {
-        opacity: 1;
-      }
+    // &:hover > figcaption {
+    //   opacity: 1;
+    // }
+    img:hover ~ figcaption {
+      opacity: 1;
     }
   }
   @include flexy($disp: flex, $just: space-evenly, $wrap: wrap);

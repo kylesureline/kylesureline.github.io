@@ -1036,7 +1036,7 @@ p.see-also {
   opacity: 0;
   transition: opacity 0.2s;
 }
-#skills .tech-icons figure:hover figcaption {
+#skills .tech-icons figure img:hover ~ figcaption {
   opacity: 1;
 }
 
