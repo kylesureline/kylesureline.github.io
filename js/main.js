@@ -22,23 +22,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
       }
     },
     {
-      name: 'Expensify',
-      descriptions: {
-        short: 'An expense tracking app built with React and Webpack',
-        long: 'Log in and start tracking expenses. It\'s time to get your expenses under control. Developed with tests using Jest.'
-      },
-      tags: ['React', 'Redux', 'Webpack', 'Firebase', 'Jest', 'Heroku'],
-      links: {
-        github: 'https://github.com/kylesureline/react-course-2-expensify-app',
-        demo: 'https://expense-tab.herokuapp.com/'
-      },
-      cardType: 'slider',
-      images: {
-        slider: 'expensify-full.jpg',
-        modal: 'expensify-modal.jpg'
-      }
-    },
-    {
       name: 'JSON API',
       descriptions: {
         short: 'A prototype for an Awesome Startup employee directory. Uses the Fetch API to retrieve data from a server.',
