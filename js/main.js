@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
         short: 'A full-featured Hangman game, built with React and Webpack',
         long: 'This Hangman game is built using React and deployed to Heroku. It includes a comprehensive testing suite using Jest.'
       },
-      tags: ['React', 'Redux', 'Webpack', 'Firebase', 'Jest', 'Heroku'],
+      tags: ['React', 'Redux', 'Webpack', 'Jest', 'React Testing Library'],
       links: {
         github: 'https://github.com/kylesureline/hangapp',
         demo: '/hangapp/'
