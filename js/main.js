@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
       tags: ['React', 'Redux', 'Webpack', 'Firebase', 'Jest', 'Heroku'],
       links: {
         github: 'https://github.com/kylesureline/hangapp',
-        demo: 'https://react-hangapp.herokuapp.com'
+        demo: '/hangapp/'
       },
       cardType: 'fader',
       images: {
