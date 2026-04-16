@@ -196,9 +196,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type='button'],
+[type='reset'],
+[type='submit'] {
   -webkit-appearance: button;
 }
 
@@ -206,9 +206,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -217,9 +217,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -269,8 +269,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type=checkbox],
-[type=radio] {
+[type='checkbox'],
+[type='radio'] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -280,8 +280,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -289,7 +289,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type=search] {
+[type='search'] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -299,7 +299,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type=search]::-webkit-search-decoration {
+[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -381,8 +381,8 @@ a {
   color: inherit;
 }
 
-a[href$=pdf] {
-  color: #70161E;
+a[href$='pdf'] {
+  color: #70161e;
 }
 
 a.link:hover {
@@ -398,7 +398,7 @@ header {
   width: 100%;
   z-index: 1000;
   top: 0;
-  background-color: #1C3144;
+  background-color: #1c3144;
   color: #fff;
   box-shadow: 0 0 24px -4px #000;
   font-size: 1.2em;
@@ -425,8 +425,8 @@ header {
   transition: 0.2s;
 }
 .nav-header ul li.link:hover {
-  background-color: #C3D898;
-  color: #1C3144;
+  background-color: #c3d898;
+  color: #1c3144;
 }
 
 .nav-header li a {
@@ -479,7 +479,7 @@ header {
   border-radius: 12px;
   overflow: hidden;
   background-color: #fff;
-  color: #1C3144;
+  color: #1c3144;
   position: relative;
   text-align: center;
 }
@@ -635,7 +635,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1C3144;
+  background-color: #1c3144;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -khtml-border-radius: 4px;
@@ -647,7 +647,7 @@ header {
 
 .modal-content .tags li {
   color: #fff;
-  background-color: #70161E;
+  background-color: #70161e;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -khtml-border-radius: 4px;
@@ -658,7 +658,7 @@ header {
 }
 
 .modal-content p a {
-  color: #70161E;
+  color: #70161e;
   transition: 0.4s opacity;
 }
 .modal-content p a:hover {
@@ -690,7 +690,7 @@ header {
 }
 
 .banner-image {
-  background-image: url("../images/banner-s.jpg");
+  background-image: url('../images/banner-s.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
@@ -705,22 +705,22 @@ header {
 }
 @media (max-width: 320px) {
   .banner-image {
-    background-image: url("../images/banner-xs.jpg");
+    background-image: url('../images/banner-xs.jpg');
   }
 }
 @media (min-width: 768px) {
   .banner-image {
-    background-image: url("../images/banner-md.jpg");
+    background-image: url('../images/banner-md.jpg');
   }
 }
 @media (min-width: 1024px) {
   .banner-image {
-    background-image: url("../images/banner-lg.jpg");
+    background-image: url('../images/banner-lg.jpg');
   }
 }
 @media (min-width: 1400px) {
   .banner-image {
-    background-image: url("../images/banner-xlg.jpg");
+    background-image: url('../images/banner-xlg.jpg');
   }
 }
 
@@ -735,8 +735,9 @@ header {
 .card-3x5 .front {
   text-align: center;
 }
-.card-3x5 .front, .card-3x5 .back {
-  color: #1C3144;
+.card-3x5 .front,
+.card-3x5 .back {
+  color: #1c3144;
   overflow-y: hidden;
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
@@ -752,9 +753,12 @@ header {
   height: 100%;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  box-shadow: 0 0 96px 8px #000, 0 0 0 2px rgba(0, 0, 0, 0.2);
+  box-shadow:
+    0 0 96px 8px #000,
+    0 0 0 2px rgba(0, 0, 0, 0.2);
 }
-.card-3x5 p, .card-3x5 h1 {
+.card-3x5 p,
+.card-3x5 h1 {
   margin: 0;
   padding: 0 12px;
 }
@@ -777,7 +781,7 @@ header {
   animation: fold-back 0.6s 2s forwards;
 }
 .card-3x5 .inner .front::before {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
@@ -898,15 +902,15 @@ p.see-also {
 }
 @media (max-width: 320px) {
   p.definition,
-p.synonyms,
-p.see-also {
+  p.synonyms,
+  p.see-also {
     font-size: 0.95em;
   }
 }
 @media (min-width: 768px) {
   p.definition,
-p.synonyms,
-p.see-also {
+  p.synonyms,
+  p.see-also {
     font-size: 1.4em;
   }
 }
@@ -955,8 +959,8 @@ p.see-also {
 }
 
 #about {
-  background-color: #C3D898;
-  color: #1C3144;
+  background-color: #c3d898;
+  color: #1c3144;
 }
 
 #about .container {
@@ -1006,11 +1010,11 @@ p.see-also {
 #skills {
   padding: 2em 0;
   text-align: center;
-  background-color: #596F62;
+  background-color: #596f62;
 }
 
 #skills h2 {
-  color: #C3D898;
+  color: #c3d898;
 }
 
 #skills .tech-icons {
@@ -1031,8 +1035,10 @@ p.see-also {
   max-width: 100px;
 }
 #skills .tech-icons figure figcaption {
-  color: #C3D898;
-  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  color: #c3d898;
+  font-family:
+    'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic,
+    sans-serif;
   opacity: 0;
   transition: opacity 0.2s;
 }
@@ -1045,7 +1051,7 @@ p.see-also {
 }
 
 #contact .icon.linkedin path {
-  fill: #0077B5;
+  fill: #0077b5;
 }
 
 #contact .icon.twitter path {
@@ -1054,13 +1060,16 @@ p.see-also {
 
 #skills .icon {
   width: 100%;
+  height: 100%;
   padding: 15px;
-  border: 2px solid #596F62;
+  border: 2px solid #596f62;
   border-radius: 12px;
   transition: border 0.2s;
+  object-fit: contain;
+  object-position: center;
 }
 #skills .icon path {
-  fill: #C3D898;
+  fill: #c3d898;
 }
 #skills .icon:hover {
   border: 2px solid rgba(195, 216, 152, 0.5);
@@ -1069,13 +1078,13 @@ p.see-also {
 .arrow path,
 .close path,
 .reply path {
-  fill: #1C3144;
+  fill: #1c3144;
 }
 
 nav,
 #portfolio h3,
 h2 {
-  font-family: "Staatliches", Impact;
+  font-family: 'Staatliches', Impact;
 }
 
 #about,
@@ -1091,7 +1100,9 @@ footer p,
 .modal-content p,
 .banner,
 .tags {
-  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-family:
+    'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic,
+    sans-serif;
 }
 
 .card {
@@ -1105,7 +1116,7 @@ footer p,
 }
 
 h2 {
-  color: #1C3144;
+  color: #1c3144;
 }
 
 #about p,
@@ -1116,8 +1127,8 @@ h2 {
 }
 @media (min-width: 768px) {
   #about p,
-#contact p,
-.card p {
+  #contact p,
+  .card p {
     font-size: 1.2em;
   }
 }
@@ -1134,19 +1145,25 @@ h3 {
   -moz-border-radius: 12px;
   -khtml-border-radius: 12px;
   border-radius: 12px;
-  background-color: #C3D898;
-  color: #1C3144;
+  background-color: #c3d898;
+  color: #1c3144;
   margin: 0 auto auto auto;
   display: inline-block;
   overflow-y: hidden;
   opacity: 1;
   filter: blur(0px);
-  box-shadow: 4px 4px 32px 0 #000, 0 0 0 1px rgba(0, 0, 0, 0.2);
-  transition: 0.4s transform, 0.4s box-shadow;
+  box-shadow:
+    4px 4px 32px 0 #000,
+    0 0 0 1px rgba(0, 0, 0, 0.2);
+  transition:
+    0.4s transform,
+    0.4s box-shadow;
 }
 .card:hover {
   transform: scale(1.1);
-  box-shadow: 12px 12px 64px -8px #000, 0 0 0 1px rgba(0, 0, 0, 0.2);
+  box-shadow:
+    12px 12px 64px -8px #000,
+    0 0 0 1px rgba(0, 0, 0, 0.2);
 }
 @media (max-width: 320px) {
   .card {
@@ -1222,7 +1239,7 @@ h3 {
 }
 
 #contact {
-  background-color: #70161E;
+  background-color: #70161e;
   color: #fff;
 }
 
@@ -1266,7 +1283,7 @@ h3 {
 }
 
 #contact p a {
-  color: #C3D898;
+  color: #c3d898;
 }
 
 #contact .container {
@@ -1275,7 +1292,7 @@ h3 {
 
 footer {
   text-align: center;
-  background-color: #1C3144;
+  background-color: #1c3144;
   color: #fff;
 }
 footer p {
@@ -1315,17 +1332,17 @@ footer p {
 }
 @media (max-width: 320px) {
   #about,
-#skills,
-#portfolio,
-#contact {
+  #skills,
+  #portfolio,
+  #contact {
     padding: 1.5em 0.75em;
   }
 }
 @media (min-width: 768px) {
   #about,
-#skills,
-#portfolio,
-#contact {
+  #skills,
+  #portfolio,
+  #contact {
     padding: 3em 2em;
   }
 }

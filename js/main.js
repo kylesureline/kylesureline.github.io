@@ -2,6 +2,26 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
   const projects = [
     {
+      name: 'RecipeVaultApp',
+      descriptions: {
+        short: 'The last recipe app you\'ll ever need',
+        long: 'An installable PWA built with the MERN stack. Recipes are stored locally using IndexedDB for offline access and synced to MongoDB for multi-device access. Users can quickly import a recipe from photos, text, or URL and AI will format it and generate a picture of the dish.'
+      },
+      tags: ['MongoDB', 'Express', 'React', 'Node', 'Stripe', 'S3', 'Docker', 'Service Worker', 'IndexedDB'],
+      links: {
+        github: 'https://github.com/kylesureline/recipe-vault',
+        demo: 'https://recipevaultapp.com'
+      },
+      cardType: 'fader',
+      images: {
+        fader: {
+          bottom: 'recipevaultapp-overlay.jpg',
+          top: 'recipevaultapp.jpg'
+        },
+        modal: 'recipevaultapp-modal.jpg'
+      }
+    },
+    {
       name: 'Hangapp',
       descriptions: {
         short: 'A full-featured Hangman game, built with React and Webpack',
@@ -22,26 +42,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
       }
     },
     {
-      name: 'JSON API',
-      descriptions: {
-        short: 'A prototype for an Awesome Startup employee directory. Uses the Fetch API to retrieve data from a server.',
-        long: 'This app retrieves fake employees from <a href="https://randomuser.me/" target="_blank">The Random User Generator API</a> using the Fetch API. You can click on a user to see more info displayed on a modal, and search for a user by their name.'
-      },
-      tags: ['HTML', 'CSS', 'Fetch API', 'Modal', 'Search'],
-      links: {
-        github: 'https://github.com/kylesureline/awesome-startup',
-        demo: '/awesome-startup/'
-      },
-      cardType: 'fader',
-      images: {
-        fader: {
-          bottom: 'awesome-startup-overlay.jpg',
-          top: 'awesome-startup.jpg'
-        },
-        modal: 'awesome-startup-modal.jpg'
-      }
-    },
-    {
       name: 'Web App Dashboard',
       descriptions: {
         short: 'A beautiful, web dashboard complete with JavaScript-driven charts and graphs.',
@@ -56,60 +56,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
       images: {
         slider: 'web-app-dashboard-full.jpg',
         modal: 'web-app-dashboard-modal.jpg'
-      }
-    },
-    {
-      name: 'Photo Gallery',
-      descriptions: {
-        short: 'An interactive photo gallery using JavaScript and jQuery.',
-        long: 'This photo gallery is built using jQuery and a lightbox plugin called <a href="https://dimsemenov.com/plugins/magnific-popup/" target="_blank">Magnific Popup</a>. It displays thumbnails, which can be clicked to load the full size image. The image gallery can be searched.'
-      },
-      tags: ['HTML', 'CSS', 'jQuery', 'Modal', 'Search'],
-      links: {
-        github: 'https://github.com/kylesureline/photo-gallery',
-        demo: '/photo-gallery/'
-      },
-      cardType: 'fader',
-      images: {
-        fader: {
-          bottom: 'photo-gallery-overlay.jpg',
-          top: 'photo-gallery.jpg'
-        },
-        modal: 'photo-gallery-modal.jpg'
-      }
-    },
-    {
-      name: 'Web Style Guide',
-      descriptions: {
-        short: 'A Sass project using partials, variables, extends, and mixins to apply styles and classes to a style guide page.',
-        long: 'A Sasstronautical exploration in creating a style guide. For this project, I built a style guide using Sass partials, variables, mixins and extends.'
-      },
-      tags: ['HTML', 'CSS', 'Sass'],
-      links: {
-        github: 'https://github.com/kylesureline/web-style-guide',
-        demo: '/web-style-guide/'
-      },
-      cardType: 'slider',
-      images: {
-        slider: 'web-style-guide-full.jpg',
-        modal: 'web-style-guide-modal.jpg'
-      }
-    },
-    {
-      name: 'Registration Form',
-      descriptions: {
-        short: 'A responsive, mobile-friendly registration form using a wide variety of HTML form input types and attributes.',
-        long: 'An HTML5 form, built using semantic markup, including fieldsets, radio buttons, checkboxes, a textarea and a partridge and a pear tree.'
-      },
-      tags: ['HTML', 'CSS', 'Form'],
-      links: {
-        github: 'https://github.com/kylesureline/registration-form',
-        demo: '/registration-form/'
-      },
-      cardType: 'slider',
-      images: {
-        slider: 'registration-form-full.jpg',
-        modal: 'registration-form-modal.jpg'
       }
     }
   ];
@@ -143,14 +89,13 @@ document.addEventListener('DOMContentLoaded', (e) => {
   // functions
   function preloadImages() {
     if (document.getElementById) {
-  		document.getElementById("preload-01").style.background = "url(images/hangapp-modal.jpg) no-repeat -9999px -9999px";
-  		document.getElementById("preload-02").style.background = "url(images/awesome-startup-modal.jpg) no-repeat -9999px -9999px";
-  		document.getElementById("preload-03").style.background = "url(images/web-app-dashboard-modal.jpg) no-repeat -9999px -9999px";
-      document.getElementById("preload-04").style.background = "url(images/photo-gallery-modal.jpg) no-repeat -9999px -9999px";
+      document.getElementById("preload-01").style.background = "url(images/hangapp-modal.jpg) no-repeat -9999px -9999px";
+      document.getElementById("preload-02").style.background = "url(images/awesome-startup-modal.jpg) no-repeat -9999px -9999px";
+      document.getElementById("preload-03").style.background = "url(images/web-app-dashboard-modal.jpg) no-repeat -9999px -9999px";
+      document.getElementById("preload-04").style.background = "url(images/recipevaultapp-modal.jpg) no-repeat -9999px -9999px";
       document.getElementById("preload-05").style.background = "url(images/web-style-guide-modal.jpg) no-repeat -9999px -9999px";
       document.getElementById("preload-06").style.background = "url(images/registration-form-modal.jpg) no-repeat -9999px -9999px";
-      document.getElementById("preload-07").style.background = "url(images/expensify-modal.jpg) no-repeat -9999px -9999px";
-  	}
+    }
   }
 
   function displayModal(id) {
@@ -199,6 +144,9 @@ document.addEventListener('DOMContentLoaded', (e) => {
     let projectObj = projects[id];
 
     let modal = createElement('div', 'className', 'modal');
+    let githubLink = projectObj.name !== 'RecipeVaultApp'
+      ? `<li><a href="${projectObj.links.github}" target="_blank">${icons.github}</a></li>`
+      : '';
     let content = `
 <div class="modal-content">
   <span class="close">${icons.close}</span>
@@ -211,11 +159,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     <p>${projectObj.descriptions.long}</p>
     <div class="links">
       <ul>
-        <li>
-          <a href="${projectObj.links.github}" target="_blank">
-            ${icons.github}
-          </a>
-        </li>
+        ${githubLink}
         <li>
           <a href="${projectObj.links.demo}" target="_blank">
             ${icons.demo}
