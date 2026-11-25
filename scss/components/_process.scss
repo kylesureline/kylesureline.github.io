@@ -1,0 +1,40 @@
+// ======================================
+//  Process
+// ======================================
+
+.steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+
+  @include bp(760px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 3rem;
+  }
+
+  li {
+    padding-top: 1.25rem;
+    border-top: 2px solid $ink;
+  }
+
+  h3 span {
+    color: $ink-soft;
+    font-size: 0.9em;
+    font-weight: 400;
+  }
+
+  p {
+    margin-bottom: 0;
+    color: $ink-soft;
+    font-size: 0.97rem;
+  }
+}
+
+.step-num {
+  display: block;
+  margin-bottom: 0.6rem;
+  color: $accent;
+  font-family: $font-display;
+  font-size: 2.4rem;
+  line-height: 1;
+}

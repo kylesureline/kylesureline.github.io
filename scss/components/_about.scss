@@ -2,36 +2,40 @@
 //  About
 // ======================================
 
-#about {
-  background-color: map-get($theme, 4);
-  color: map-get($theme, 1);
-}
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.75rem, 4vw, 3.5rem);
+  align-items: center;
 
-#about .container {
-  max-width: 1024px;
-}
-
-#about .row {
-  @include flexy($disp: flex, $wrap: wrap, $just: center, $align-items: center);
-  & .bio {
-    -webkit-flex: 1 0 65%;       /* Safari 6.1+. iOS 7.1+, BB10 */
-    -ms-flex: 1 0 65%;
-    flex: 1 0 65%;
-    @media (min-width: 768px) {
-      text-align: left;
-    }
-  }
-  & .profile {
-    -webkit-flex: 1 0 30%;       /* Safari 6.1+. iOS 7.1+, BB10 */
-    -ms-flex: 1 0 30%;
-    flex: 1 0 30%;
-    text-align: center;
-    & img {
-      @include roundy;
-    }
+  @include bp(720px) {
+    grid-template-columns: 240px 1fr;
   }
 }
 
-#about h2 {
+.portrait {
+  max-width: 240px;
   margin: 0;
+  border: 1px solid $line;
+  border-radius: $radius;
+  overflow: hidden;
+  background-color: $paper;
+
+  img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+}
+
+.about-body {
+  h2 {
+    max-width: 20ch;
+  }
+
+  p {
+    max-width: 60ch;
+    color: $ink-soft;
+  }
 }
