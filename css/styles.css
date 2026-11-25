@@ -552,16 +552,10 @@ p:last-child {
 }
 
 .brand-mark {
-  display: grid;
-  place-items: center;
+  display: block;
+  flex-shrink: 0;
   width: 30px;
   height: 30px;
-  border-radius: 7px;
-  background-color: #17150f;
-  color: #f7f3ec;
-  font-family: "Instrument Serif", Georgia, "Times New Roman", serif;
-  font-size: 1rem;
-  line-height: 1;
 }
 
 .site-nav {
