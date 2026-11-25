@@ -1,3 +1,59 @@
 // ======================================
 //  Buttons
 // ======================================
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.4rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease,
+    color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+}
+
+.btn-primary {
+  background-color: $accent;
+  color: $white;
+
+  &:hover {
+    background-color: $accent-dark;
+  }
+}
+
+.btn-ghost {
+  border-color: rgba($ink, 0.25);
+  color: $ink;
+
+  &:hover {
+    border-color: $ink;
+    background-color: rgba($white, 0.5);
+  }
+}
+
+.btn-light {
+  border-color: rgba($paper, 0.45);
+  color: $paper;
+
+  &:hover {
+    background-color: $paper;
+    color: $ink;
+  }
+}
+
+.btn-sm {
+  padding: 0.55rem 1rem;
+  font-size: 0.85rem;
+}
